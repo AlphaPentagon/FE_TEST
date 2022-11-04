@@ -1,0 +1,34 @@
+sort a list alphabetically in columns by just using CSS
+
+.list-columns, .list-columns--max-cols-3 {
+    display: block;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+  margin: 0 auto;
+ 
+}
+
+.list-columns > .list-columns__item {
+  float: none;
+  clear: none;
+  width: 100%;
+}
+
+@media all and (max-width: 620px) {
+  .list-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -o-column-count: 2;
+    column-count: 2;
+  }
+
+  @media all and (max-width: 375px) {
+    .list-columns {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      -o-column-count: 1;
+      column-count: 1;
+    }
+}
