@@ -20,7 +20,7 @@ I then spent some time reading the current code, paying special attention to the
 
 I then made a rough plan of what the problem was and how I understood it, and how I might go ahead and solve it.
 
-## Initial Attempts
+## Solution
 
 - I initially used CSS grid to create three separate columns and then tried to find a solution to order the elements in alphabetical order by columns. I failed to find a way to do this successfully.
 
@@ -30,6 +30,16 @@ I then made a rough plan of what the problem was and how I understood it, and ho
 
 - This now presented a new issue - at least one of the list items text was spread over more than one column. Althought this was still readable, it wasn't very desirable from a user experience point of view. Upon inspecting the DOM, I saw that the child li elements were being set a width of 33% - removing this and setting them all to auto fixed this.
 
-- When resizing the browser the above issue appeared again - this was fixed using the break-inside: avoid-column property (althought this doesn't have great support for older browsers)
+- When resizing the browser the above issue appeared again - this was fixed using the break-inside: avoid-column property. This also addresses the issue of only a small number of list items (e.g. 2) being present.
 
-## Solution
+- I then created two media queries for smaller displays to limit the column count
+
+- In order to support older browsers, I wrapped all of the CSS in a @supports query that ensures the style will only be applied if the browser supports both column-count and break-inside: avoid-column.
+
+  - If it does not it will use the default float property - although this isn't listed in the correct format, the content is still readable, which is a better UE then having a non-functioning site
+
+  - Write bit about browser-prefixes
+
+## Challenges
+
+## Reflections
