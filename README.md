@@ -7,7 +7,7 @@
 - Try to solve the problem using CSS. ✅
 - Do not change the HTML. ✅
 - It needs to look reasonable in Safari, Firefox and Chrome, with a pragmatic fallback for older browsers. ✅
-- The solution needs to cope with a shorter list, maybe just two items.
+- The solution needs to cope with a shorter list, maybe just two items. ✅
 - The solution needs to handle a smaller screen width. ✅
 
 ## Planning
@@ -29,5 +29,7 @@ I then made a rough plan of what the problem was and how I understood it, and ho
 - After implementing the column-count, it still wasn't correctly displaying in my browser (google chrome). I used Chrome Dev tools to inspect the DOM and saw that individual list item elements were being set float and clear property values. I overrode these back to their defaults and this fixed the issue.
 
 - This now presented a new issue - at least one of the list items text was spread over more than one column. Althought this was still readable, it wasn't very desirable from a user experience point of view. Upon inspecting the DOM, I saw that the child li elements were being set a width of 33% - removing this and setting them all to auto fixed this.
+
+- When resizing the browser the above issue appeared again - this was fixed using the break-inside: avoid-column property (althought this doesn't have great support for older browsers)
 
 ## Solution

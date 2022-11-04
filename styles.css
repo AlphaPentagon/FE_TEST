@@ -1,4 +1,8 @@
-sort a list alphabetically in columns by just using CSS .list-columns,
+/* sort a list alphabetically in columns by just using CSS
+
+*/
+
+.list-columns,
 .list-columns--max-cols-3 {
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -11,9 +15,11 @@ sort a list alphabetically in columns by just using CSS .list-columns,
   float: none;
   clear: none;
   width: 100%;
+  display: block;
+  break-inside: avoid-column;
 }
 
-@media all and (max-width: 620px) {
+@media all and (min-width: 375px && max-width: 620px) {
   .list-columns {
     -webkit-column-count: 2;
     -moz-column-count: 2;
