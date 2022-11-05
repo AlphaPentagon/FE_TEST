@@ -21,7 +21,7 @@
     clear: none;
     width: 100%;
     /* Ensures that list item text does not span across more than one column */
-    display: inline-block;
+    break-inside: avoid-column;
   }
 
   /* Media queries to change no. of columns for smaller displays */

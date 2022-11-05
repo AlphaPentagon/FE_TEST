@@ -32,7 +32,7 @@ I then made a rough plan of what the problem was and how I understood it, and ho
 
 - When resizing the browser the above issue appeared again - this was fixed using the break-inside: avoid-column property. This also addresses the issue of only a small number of list items (e.g. 2) being present.
 
-  - UPDATE: I found [this](https://haacked.com/archive/2018/12/03/css-column-list-adventure/) article online which suggested setting the width of the li elements to 100% and setting their display property as inline-block would be enough. Implemented and working as expected.
+  - UPDATE: I found [this](https://haacked.com/archive/2018/12/03/css-column-list-adventure/) article online which suggested setting the width of the li elements to 100% and setting their display property as inline-block would be enough. However this meant that when their were only two list items they stuck to one column, instead of two, so reverted back to the original solution.
 
 - I then created two media queries for smaller displays to limit the column count
 
