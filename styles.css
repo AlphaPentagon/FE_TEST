@@ -1,46 +1,8 @@
-/*
-
-@supports needed to ensure that original float solution from external css file works if older browsers do not support the specified properties
-
-*/
-
-@supports (column-count: 3) and (break-inside: avoid-column) {
-  .list-columns,
-  .list-columns--max-cols-3 {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    -o-column-count: 3;
-    /* Sets the number of columns desired - list items will fill from top to bottom in first column before filling subsequent columns */
-    column-count: 3;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  .list-columns > .list-columns__item {
-    float: none;
-    clear: none;
-    width: 100%;
-    /* Ensures that list item text does not span across more than one column */
-    display: inline-block;
-  }
-
-  /* Media queries to change no. of columns for smaller displays */
-
-  @media all and (max-width: 620px) {
-    .list-columns {
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      -o-column-count: 2;
-      column-count: 2;
-    }
-  }
-
-  @media all and (max-width: 374px) {
-    .list-columns {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      -o-column-count: 1;
-      column-count: 1;
-    }
-  }
-}
+/* .list-columns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 100%;
+  gap: 1rem;
+} */
