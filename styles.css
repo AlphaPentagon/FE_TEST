@@ -13,6 +13,7 @@
     /* Sets the number of columns desired - list items will fill from top to bottom in first column before filling subsequent columns */
     column-count: 3;
     margin: 0 auto;
+    padding: 2rem;
   }
 
   .list-columns > .list-columns__item {
