@@ -19,11 +19,8 @@
     float: none;
     clear: none;
     width: 100%;
-    display: block;
-    /* Ensures that list item text does not span across more than one column 
-    
-    TODO: add browser prefixes or implement this solution https://haacked.com/archive/2018/12/03/css-column-list-adventure/*/
-    break-inside: avoid-column;
+    /* Ensures that list item text does not span across more than one column */
+    display: inline-block;
   }
 
   /* Media queries to change no. of columns for smaller displays */
