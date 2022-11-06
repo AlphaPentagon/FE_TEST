@@ -22,6 +22,8 @@ I then made a rough plan of what the problem was and how I understood it, and ho
 
 ## Solution
 
+[DEMO](https://alphapentagon.github.io/FE_TEST/)
+
 - I initially used CSS grid to create three separate columns and then tried to find a solution to order the elements in alphabetical order by columns. I failed to find a way to do this successfully.
 
 - This lead me to research online, where I found [this](https://stackoverflow.com/questions/12332528/how-to-display-list-items-as-columns) stackoverflow article about using the 'column-count' property: . This looked like it might solve the issue, but I was careful to check the cross-browser compatibility first. Fortunately MDN told me it worked across all modern browsers, with only IE 9 (0.15% usage) and less and Opera 10.1 (0% usage) and less not being compatible.
