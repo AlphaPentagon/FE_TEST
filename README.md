@@ -1,4 +1,4 @@
-# UCAS TEST - JS SOLUTION
+# FE TEST - JS SOLUTION
 
 ## Problem
 
