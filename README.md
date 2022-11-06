@@ -54,6 +54,8 @@ I then made a rough plan of what the problem was and how I understood it, and ho
 
 - I enjoyed making sure that the solution would work across all browsers and creating the fallback if not - this is something I haven't had much experience in, so was a useful challenge. I especially liked implementing the @supports query, as I found this resulted in neat and readable code.
 
-- I struggled to find a fallback solution that would support older browsers and still solve the problem. I settled using the original code as a fallback solution - this didn't solve the order problem, but did meant the content would still be readable.
+- I struggled to find a fallback solution that would support older browsers and still solve the problem. I settled using the original code as a fallback solution - this didn't solve the order problem, but did mean the content would still be readable.
 
 - Some of the li elements are still having clear and padding styles applied, althought this doesn't have an effect on how the page displays - this is due to the CSS hierachy, as most of these elements are being targeted using more specific selectors than my own e.g. :nth-of-type(3n). Ideally I would overwrite these, but as it doesn't have an actual effect on the page I have decided to leave these for now.
+
+- I'm aware of tools such as PostCSS that could have created polyfills for browser compatibility on the fly, as well as adding vendor prefixes - but this was a great learning exercise to try and come up with my own fallback solution!
