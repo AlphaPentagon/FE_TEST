@@ -2,7 +2,7 @@
 
 ## Problem
 
-#### Task 1
+#### Task 2
 
 - Try to solve the problem using JS. ✅
 - Do not change the HTML. ✅
