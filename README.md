@@ -14,7 +14,7 @@
 
 Before I started coding I copied the individual code (including the external CSS file) into my own local folder and open it in VS code.
 
-This provided me with several benefits - IntelliSense in VS code - being able to run a Live Server in different browsers for testing and production - being able to format using the Prettier extension - being able to read the external CSS file in something other than plain text
+This provided me with several benefits - IntelliSense in VS code - being able to run a Live Server in different browsers for testing and production - being able to format using the Prettier extension - being able to read the external CSS file in something other than plain text.
 
 I then spent some time reading the current code, paying special attention to the CSS class selectors in the external CSS file.
 
@@ -36,18 +36,18 @@ Finally I made a rough plan of what the problem was and how I understood it, and
 
   - UPDATE: I found [this](https://haacked.com/archive/2018/12/03/css-column-list-adventure/) article online which suggested setting the width of the li elements to 100% and setting their display property as inline-block would be enough. However when there were only two list items they displayed in only one column, instead of two, so I reverted back to the original solution.
 
-- I then created two media queries for smaller displays to limit the column count
+- I then created two media queries for smaller displays to limit the column count.
 
 - In order to support older browsers, I wrapped all of the CSS in a @supports query that ensures the style will only be applied if the browser supports both column-count and break-inside: avoid-column.
 
-  - If it does not support both CSS properties, the browser will use the default CSS code - although this doesn't display the list in the desired top to bottom format, the content is still readable, which is a better UE then having a non-functioning site
+  - If it does not support both CSS properties, the browser will use the default CSS code - although this doesn't display the list in the desired top to bottom format, the content is still readable, which is a better UE then having a non-functioning site.
 
 - I ensured that the vendor prefixes for 'column-count' and 'break-inside' were all implemented, to ensure cross browser compatibility.
 
 ## Testing
 
 - I manually tested in development using Live Server on localhost:5500 in the latest versions of Chrome & Firefox, as well as Chrome for Android.
-- I then tested in the above browsers again but using the deployed link in GitHub pages
+- I then tested in the above browsers again but using the deployed link in GitHub pages.
 - I did not have access to older browsers or an IOS device to test Safari, but having done my research it should work or use the original code as a fallback.
 
 ## Challenges & Reflections
