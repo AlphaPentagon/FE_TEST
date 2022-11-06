@@ -1,4 +1,4 @@
-# UCAS TEST - CSS SOLUTION
+# FE TEST - CSS SOLUTION
 
 ## Problem
 
